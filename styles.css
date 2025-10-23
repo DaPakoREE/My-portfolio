@@ -130,13 +130,9 @@ h3 {
 svg {
     width: 1.5em;
     height: 1.5em;
-    margin-right: 0.2em;
+    margin-right: 0.5em;
 }
 
 #contact-me div {
     display: flex;
-}
-
-#contact-me svg {
-    margin-right: 0.5em;
 }
