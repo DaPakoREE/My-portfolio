@@ -35,7 +35,7 @@ a:hover {
     text-decoration: none;
 }
 
-svg {
+.svg {
     width: 1.5em;
     height: 1.5em;
     margin-right: 0.5em;
@@ -73,7 +73,6 @@ h3 {
 .box-content {
     border: 0.15rem solid var(--colorBlue);
     background-color: var(--colorPrimarySecondary);
-    gap: 0.4em;
     border-radius: 20px;
     padding: 1.5rem 2rem;
     margin: 0;
@@ -118,12 +117,14 @@ h3 {
     padding: 0;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
 }
 
 #tools-and-skills .box-content {
     display: flex;
     flex-wrap: wrap;
     max-width: 300px;
+    gap: 0.4em;
 }
 
 .box-content p {
@@ -151,12 +152,25 @@ h3 {
     flex-wrap: wrap;
     gap: 0.2rem;
     width: 100%;
+    margin-top: 5rem;
 }
 
-.project * {
+.project:first-of-type {
+    margin: 0;
+}
+
+.project .project-image, .project .box-content, .used-tools {
     max-width: 400px;
     width: 100%;
     border-radius: 20px;
+}
+
+.used-tools{
+    display: flex;
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 0.3rem 0.1rem 0.3rem 0.3rem;
+    background-color: var(--colorPrimaryTertiary);
 }
 
 #contact-me div {
