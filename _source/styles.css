@@ -20,7 +20,7 @@ body {
     --colorRed: #fd7e7e;
 }
 
-main-container {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +211,7 @@ footer {
         font-size: 1.1rem;
     }
 
-    main-container {
+    main {
         padding: 0 3rem;
         width: 80%;
     }
@@ -224,6 +224,7 @@ footer {
     }
 
     #about-me, #tools-and-skills, #my-projects, #contact-me {
+        width: 90%;
         justify-content: left;
     }
 
@@ -253,7 +254,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    main-container {
+    main {
         width: 70%;
     }
 
