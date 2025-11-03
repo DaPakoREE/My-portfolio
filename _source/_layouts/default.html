@@ -9,7 +9,8 @@
 <body>
     <header>
         <div id="theme-toggle">
-            
+            <label for="theme-switch"><img src="images/svgs/{{ site.data.svgs.other.Sun.image_file }}" alt="" class="svg"></label>
+            <input type="checkbox" id="theme-switch" name="theme-switch">
         </div>
         <div id="navigation">
 
@@ -18,5 +19,6 @@
     <main>
         {{ content }}
     </main>
+    <script src="theme_switch.js"></script>
 </body>
 </html>

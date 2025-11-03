@@ -1,3 +1,22 @@
+/* variables */
+:root {
+    --colorPrimary: #0b111a;
+    --colorPrimarySecondary: #0e0729d2;
+    --colorPrimaryTertiary: #211f31;
+    --colorSecondary: #def1ff;
+    --colorBlue: #2559e7b4;
+    --colorRed: #fd7e7e;
+}
+
+.light {
+    --colorPrimary: #f0f9ff; 
+    --colorPrimarySecondary: #f3f0ffad; 
+    --colorPrimaryTertiary: #dbd7ff; 
+    --colorSecondary: #0b111a; 
+    --colorBlue: #85a5fdb4; 
+    --colorRed: #ff5c5c;
+}
+
 * {
     box-sizing: border-box;
     font-size: 1rem;
@@ -8,16 +27,6 @@ body {
     background-color: var(--colorPrimary);
     display: flex;
     justify-content: center;
-}
-
-/* variables */
-:root {
-    --colorPrimary: #0b111a;
-    --colorPrimarySecondary: #0e0729d2;
-    --colorPrimaryTertiary: #211f31;
-    --colorSecondary: #def1ff;
-    --colorBlue: #2559e7b4;
-    --colorRed: #fd7e7e;
 }
 
 main {
@@ -86,6 +95,10 @@ h4 {
 
 #title {
     font-size: 2.7rem;
+}
+
+header #theme-switch {
+    display: none;
 }
 
 #title-card, #about-me, #tools-and-skills, #my-projects, #contact-me {
