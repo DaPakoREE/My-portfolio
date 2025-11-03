@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--colorPrimary);
+    display: flex;
+    justify-content: center;
+}
+
+/* variables */
+:root {
+    --colorPrimary: #0b111a;
+    --colorPrimarySecondary: #0e0729d2;
+    --colorPrimaryTertiary: #211f31;
+    --colorSecondary: #def1ff;
+    --colorBlue: #2559e7b4;
+    --colorRed: #fd7e7e;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    color: var(--colorSecondary);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: var(--colorSecondary);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+}
+
+p {
+    width: 100%;
+}
+
+h1, #title {
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.6rem 0;
+    padding-top: 7rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0.4rem 0
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.2rem 0;
+}
+
+h4 {
+    margin: 0.5rem 0;
+}
+
+.secondary-border {
+    border: 0.2rem solid var(--colorSecondary);
+}
+
+.box-content {
+    border: 0.15rem solid var(--colorBlue);
+    background-color: var(--colorPrimarySecondary);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    margin: 0;
+}
+
+#title {
+    font-size: 2.7rem;
+}
+
+#title-card, #about-me, #tools-and-skills, #my-projects, #contact-me {
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+#title-card {
+    text-align: center;
+}
+
+#title-card > img {
+    display: none;
+    border-radius: 50%;
+    max-width: 400px;
+}
+
+#self-descriptor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#self-descriptor span {
+    color: var(--colorRed);
+}
+
+#self-descriptor img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#tools-and-skills {
+    gap: 1rem;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+#tools-and-skills .box-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 22rem;
+    gap: 0.4em;
+}
+
+.box-content p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 0.4em;
+}
+
+.item {
+    background-color: var(--colorPrimaryTertiary);
+    border-radius: 10px;
+    padding: 0.5rem 0.7rem;
+    min-width: max-content;
+    max-height: min-content;
+    display: flex;
+    align-items: center;
+}
+
+.project {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.project:first-of-type {
+    margin-top: 2rem;
+}
+
+.project .project-image, .project .box-content, .used-tools {
+    max-width: 22rem;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.project .project-image {
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.used-tools{
+    display: flex;
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 0.3rem 0.1rem 0.3rem 0.3rem;
+    background-color: var(--colorPrimaryTertiary);
+}
+
+#contact-me div {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 4rem 0 1rem 0;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    * {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 0 3rem;
+        width: 80%;
+    }
+
+    #title-card {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #about-me, #tools-and-skills, #my-projects, #contact-me {
+        width: 90%;
+        justify-content: left;
+    }
+
+    #contact-me {
+        width: 60%;
+    }
+
+    #title-card > img {
+        display: block;
+        width: 50%;
+        margin-top: 6rem;
+    }
+
+    #self-descriptor {
+        width: 50%;
+    }
+
+    #self-descriptor img {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 2200px) {
+
+    * {
+        font-size: 1.2rem;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    .project .project-image, .project .box-content, .used-tools {
+        max-width: 31.25rem;
+    }
+}

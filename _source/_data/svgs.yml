@@ -1,0 +1,91 @@
+tool_categories:
+  - category: Programming Language
+    tools: 
+      - title: Python
+        image_file: py.svg
+        responsive: false
+        license: svg icon from https://www.svgrepo.com/svg/452091/python. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      
+      - title: HTML
+        image_file: html.svg
+        responsive: false
+        license: svg icon from https://www.svgrepo.com/svg/452228/html-5. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+      - title: CSS
+        image_file: css.svg
+        responsive: false
+        license: svg icon from https://www.svgrepo.com/svg/373535/css. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      
+      - title: JavaScript
+        image_file: js.svg
+        responsive: false
+        license: svg icon from https://www.svgrepo.com/svg/349419/javascript. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+
+  - category: Databases and Backend
+    tools:
+    - title: Supabase
+      image_file: supabase.svg
+      responsive: false
+      license: 
+
+    - title: Express.js
+      image_file: expressjs_light.svg
+      image_file_alt: expressjs_dark.svg
+      responsive: true
+      license:
+
+
+  - category: Professional Skills
+    tools:
+    - title: Git
+      image_file: git.svg
+      responsive: false
+      license: svg icon from https://www.svgrepo.com/svg/452210/git. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+    - title: Problem Solving
+      image_file: problem_solving.svg
+      responsive: false
+      license: svg icon from https://www.svgrepo.com/svg/323073/puzzle. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+
+    - title: Team Collaboration
+      image_file: team_collaboration.svg
+      responsive: false
+      license: svg icon from https://www.svgrepo.com/svg/335405/group. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+
+
+other:
+  GitHub:
+    image_file: github_light.svg
+    image_file_alt: github_dark.svg
+    responsive: true
+    license: svg icon from https://www.svgrepo.com/svg/521688/github. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+
+  OpenLink:
+    image_file: open_link_light.svg
+    image_file_alt: open_link_dark.svg
+    responsive: true
+    license: 
+
+  Mail:
+    image_file: mail_light.svg
+    image_file_alt: mail_dark.svg
+    responsive: true
+    license: svg icon from https://www.svgrepo.com/svg/521736/mail. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+
+  Location:
+    image_file: location_light.svg
+    image_file_alt: location_dark.svg
+    responsive: true
+    license: svg icon from https://www.svgrepo.com/svg/449138/location. Apache license. https://www.svgrepo.com/page/licensing/#Apache
+
+  Sun:
+    image_file: sun.svg
+    responsive: false
+    license: svg icon from https://www.svgrepo.com/svg/513404/sun. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+
+  Moon:
+    image_file: moon.svg
+    responsive: false
+    license: svg icon from https://www.svgrepo.com/svg/526045/moon. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
