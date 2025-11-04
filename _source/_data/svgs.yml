@@ -1,32 +1,40 @@
 tool_categories:
   - category: Programming Language
     tools: 
-      - title: Python
-        image_file: py.svg
-        license: svg icon from https://www.svgrepo.com/svg/452091/python. MIT license. https://www.svgrepo.com/page/licensing/#MIT
-      
-      - title: HTML
-        image_file: html.svg
-        license: svg icon from https://www.svgrepo.com/svg/452228/html-5. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+    - title: Python
+      image_file: py.svg
+      license: svg icon from https://www.svgrepo.com/svg/452091/python. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: Python
+    
+    - title: HTML
+      image_file: html.svg
+      license: svg icon from https://www.svgrepo.com/svg/452228/html-5. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: HTML
 
-      - title: CSS
-        image_file: css.svg
-        license: svg icon from https://www.svgrepo.com/svg/373535/css. MIT license. https://www.svgrepo.com/page/licensing/#MIT
-      
-      - title: JavaScript
-        image_file: js.svg
-        license: svg icon from https://www.svgrepo.com/svg/349419/javascript. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+    - title: CSS
+      image_file: css.svg
+      license: svg icon from https://www.svgrepo.com/svg/373535/css. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: CSS
+    
+    - title: JavaScript
+      image_file: js.svg
+      license: svg icon from https://www.svgrepo.com/svg/349419/javascript. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: JS
 
+    - title: Java
+      image_file: java.svg
+      license: svg icon from https://www.svgrepo.com/svg/452234/java. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: Java
 
-  - category: Databases and Backend
-    tools:
-    - title: Supabase
-      image_file: supabase.svg
-      license: 
+    - title: C#
+      image_file: csharp.svg
+      license: svg icon from https://www.svgrepo.com/svg/369216/c-sharp. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: C#
 
-    - title: Express.js
-      image_file: expressjs_light.svg
-      license:
+    - title: C++
+      image_file: cplusplus.svg
+      license: svg icon from https://www.svgrepo.com/svg/333518/c-plus-plus. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+      key: C++
 
 
   - category: Professional Skills
@@ -42,6 +50,75 @@ tool_categories:
     - title: Team Collaboration
       image_file: team_collaboration.svg
       license: svg icon from https://www.svgrepo.com/svg/335405/group. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+    - title: Auto Testing
+      image_file: test.svg
+      license:
+
+  - category: Databases and Backend
+    tools:
+    - title: Supabase
+      image_file: supabase.svg
+      license: 
+      key: Supabase
+
+    - title: Jekyll
+      image_file: jekyll.svg
+      license: svg icon from https://github.com/jekyll/brand/blob/master/jekyll-test-tube.svg-. CC-BY 4.0 license. https://choosealicense.com/licenses/cc-by-4.0/
+      key: Jekyll
+
+    - title: Express.js
+      image_file: expressjs_light.svg
+      license:
+      key: Express.js
+
+
+  - category: Operating Systems
+    tools:
+    - title: Windows
+      image_file: windows.svg
+      license:
+      key: Windows
+
+    - title: Raspbian
+      image_file: raspbian.svg
+      license: svg icon from https://www.svgrepo.com/svg/349487/raspberry-pi. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: Raspbian
+
+    - title: Debian
+      image_file: debian.svg
+      license: svg icon from https://www.debian.org/logos/index.en.html. CC BY-SA 3.0 license. https://creativecommons.org/licenses/by-sa/3.0/deed.en
+      key: Debian
+
+
+  - category: Game Engines
+    tools:
+    - title: Godot Engine
+      image_file: godot.svg
+      license: svg icon from https://godotengine.org/press/. CC-BY 4.0 license. https://creativecommons.org/licenses/by/4.0/
+      key: Godot
+
+    - title: Unity
+      image_file: unity_light.svg
+      license: This website is not sponsored by or affiliated with Unity Technologies or its affiliates. Unity Trademark is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere.
+      key: Unity
+
+    - title: Pygame
+      image_file: pygame.svg
+      license:
+      key: Pygame
+
+
+  - category: Miscellaneous
+    tools:
+    - title: Templating
+      image_file: template_light.svg
+      license: svg icon from https://www.svgrepo.com/svg/360840/template. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+    - title: Arduino
+      image_file: arduino.svg
+      license: svg icon from https://www.svgrepo.com/svg/442915/brand-arduino. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: Arduino
 
 
 

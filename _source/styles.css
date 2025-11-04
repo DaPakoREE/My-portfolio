@@ -185,12 +185,29 @@ header #theme-toggle label:hover {
     align-items: center;
 }
 
+#my-projects {
+    align-items: center;
+}
+
+#my-projects .mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#my-projects .desktop {
+    display: none;
+    flex-direction: row;
+}
+
 .project {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    text-align: left;
     gap: 0.2rem;
-    width: 100%;
+    width: fit-content;
+    height: fit-content;
     margin-top: 5rem;
 }
 
@@ -199,7 +216,7 @@ header #theme-toggle label:hover {
 }
 
 .project .project-image, .project .box-content, .used-tools {
-    max-width: 22rem;
+    max-width: 20rem;
     width: 100%;
     border-radius: 20px;
 }
@@ -232,15 +249,10 @@ footer {
 }
 
 
-@media screen and (min-width: 1000px) {
-
-    * {
-        font-size: 1.1rem;
-    }
-
+@media screen and (min-width: 800px) {
+    
     main {
         padding: 0 3rem;
-        width: 80%;
     }
 
     #title-card {
@@ -251,8 +263,7 @@ footer {
     }
 
     #about-me, #tools-and-skills, #my-projects, #contact-me {
-        width: 90%;
-        justify-content: left;
+        text-align: center;
     }
 
     #contact-me {
@@ -272,6 +283,22 @@ footer {
     #self-descriptor img {
         display: none;
     }
+
+    #my-projects .mobile {
+        display: none;
+    }
+
+    #my-projects .desktop {
+        display: flex;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    * {
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -279,10 +306,6 @@ footer {
 
     * {
         font-size: 1.2rem;
-    }
-
-    main {
-        width: 70%;
     }
 
     .project .project-image, .project .box-content, .used-tools {

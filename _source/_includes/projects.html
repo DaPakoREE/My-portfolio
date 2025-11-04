@@ -5,39 +5,81 @@
             <p>
                 These are all the projects I have been a part of and contributed to
             </p>
-            {% for project in site.data.projects %}
-            <div class="project">
-                <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
-                <div class="box-content">
-                    <p>
-                        {{ project.title }}
-                    </p>
-                    <h4>
-                        {{ project.time }}
-                    </h4>
-                    {{ project.desc }} <br> <br>
-                    <div class="used-tools">
-                        {%- for tool_category in site.data.svgs.tool_categories -%}
-                        {%- for tool in tool_category.tools -%}
-                        {%- if project.used_tools contains tool.title %}
-                        <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
-                        {%- if tool.license %}
-                        <!-- {{ tool.license }} -->
-                        {%- endif %}
-                        {%- endif %}
-                        {%- endfor -%}
-                        {%- endfor -%}
-                    </div>
-                    <div class="links">
-                        {%- if project.github_link %}
-                        <a href="{{ project.github_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.GitHub.image_file }}" alt="" class="svg"></a>
-                        <!-- site.data.svgs.other.GitHub.license -->
-                        {%- endif %}
-                        {%- if project.project_link %}
-                        <a href="{{ project.project_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.OpenLink.image_file }}" alt="" class="svg"></a>
-                        {%- endif -%}
+            <div class="mobile">
+                {% for project in site.data.projects %}
+                <div class="project">
+                    <div class="box-content">
+                        <p>
+                            {{ project.title }}
+                        </p>
+                        <h4>
+                            {{ project.time }}
+                        </h4>
+                        <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
+                        {{ project.desc }} <br> <br>
+                        <div class="used-tools">
+                            {%- for tool_category in site.data.svgs.tool_categories -%}
+                            {%- for tool in tool_category.tools -%}
+                            {%- if project.used_tools contains tool.key %}
+                            <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
+                            {%- if tool.license %}
+                            <!-- {{ tool.license }} -->
+                            {%- endif %}
+                            {%- endif %}
+                            {%- endfor -%}
+                            {%- endfor -%}
+                        </div>
+                        <div class="links">
+                            {%- if project.github_link %}
+                            <a href="{{ project.github_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.GitHub.image_file }}" alt="" class="svg"></a>
+                            <!-- site.data.svgs.other.GitHub.license -->
+                            {%- endif %}
+                            {%- if project.project_link %}
+                            <a href="{{ project.project_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.OpenLink.image_file }}" alt="" class="svg"></a>
+                            {%- endif -%}
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
+            </div>
+            {% for i in (0..1) %}
+            {% assign half = site.data.projects.size/2 %}
+            <div class="desktop">
+                {% for project in site.data.projects limit:half offset:i*half%}
+                <div class="project">
+                    <div class="box-content">
+                        <p>
+                            {{ project.title }}
+                        </p>
+                        <h4>
+                            {{ project.time }}
+                        </h4>
+                        <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
+                        {{ project.desc }} <br> <br>
+                        <div class="used-tools">
+                            {%- for tool_category in site.data.svgs.tool_categories -%}
+                            {%- for tool in tool_category.tools -%}
+                            {%- if project.used_tools contains tool.key %}
+                            <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
+                            {%- if tool.license %}
+                            <!-- {{ tool.license }} -->
+                            {%- endif %}
+                            {%- endif %}
+                            {%- endfor -%}
+                            {%- endfor -%}
+                        </div>
+                        <div class="links">
+                            {%- if project.github_link %}
+                            <a href="{{ project.github_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.GitHub.image_file }}" alt="" class="svg"></a>
+                            <!-- site.data.svgs.other.GitHub.license -->
+                            {%- endif %}
+                            {%- if project.project_link %}
+                            <a href="{{ project.project_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.OpenLink.image_file }}" alt="" class="svg"></a>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
             {% endfor %}
         </div>
