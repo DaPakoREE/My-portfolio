@@ -1,5 +1,5 @@
 tool_categories:
-  - category: Programming Language
+  - category: Programming Languages
     tools: 
     - title: Python
       image_file: py.svg
@@ -34,10 +34,6 @@ tool_categories:
 
   - category: Professional Skills
     tools:
-    - title: Git
-      image_file: git.svg
-      license: svg icon from https://www.svgrepo.com/svg/452210/git. MIT license. https://www.svgrepo.com/page/licensing/#MIT
-
     - title: Problem Solving
       image_file: problem_solving.svg
       license: svg icon from https://www.svgrepo.com/svg/323073/puzzle. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
@@ -46,9 +42,25 @@ tool_categories:
       image_file: team_collaboration.svg
       license: svg icon from https://www.svgrepo.com/svg/335405/group. MIT license. https://www.svgrepo.com/page/licensing/#MIT
 
-    - title: Auto Testing
-      image_file: test.svg
-      license:
+
+  - category: Libraries and Frameworks
+    tools:
+    - title: Selenium
+      image_file: selenium.svg
+      license: svg from https://www.svgrepo.com/svg/354321/selenium. Logo license. https://www.svgrepo.com/page/licensing/#Logo
+      key: Selenium
+
+
+  - category: Tools and Technologies
+    tools:
+    - title: Git
+      image_file: git.svg
+      license: svg icon from https://www.svgrepo.com/svg/452210/git. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+
+    - title: Service Accounts
+      image_file: google_cloud.svg
+      license: svg icon from https://www.svgrepo.com/svg/353805/google-cloud. Logo license. https://www.svgrepo.com/page/licensing/#Logo
+
 
   - category: Databases and Backend
     tools:
@@ -66,6 +78,11 @@ tool_categories:
       image_file: expressjs_light.svg
       license:
       key: Express.js
+
+    - title: Node.js
+      image_file: nodejs.svg
+      license: svg icon from https://www.svgrepo.com/svg/452075/node-js. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      key: Node.js
 
 
   - category: Operating Systems
@@ -102,6 +119,8 @@ tool_categories:
       image_file: pygame.svg
       license:
       key: Pygame
+
+
 
 
 other:

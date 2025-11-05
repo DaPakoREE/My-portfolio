@@ -47,9 +47,10 @@ a:hover {
 }
 
 .svg {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     margin-right: 0.5em;
+    box-sizing: content-box;
 }
 
 p {
@@ -95,6 +96,7 @@ h4 {
 
 .secondary-border {
     border: 0.2rem solid var(--colorSecondary);
+    border-radius: 50%;
 }
 
 .box-content {
@@ -102,25 +104,26 @@ h4 {
     background-color: var(--colorPrimarySecondary);
     border-radius: 20px;
     padding: 1.5rem 2rem;
-    margin: 0;
 }
 
 #title {
-    font-size: 2.7rem;
+    font-size: 3.0rem;
 }
 
 header {
-    display: flex;
     position: fixed;
-    margin-top: 1rem;
-}
-
-header #theme-toggle {
-    margin-right: auto;
+    margin: 1rem 0 0 1rem;
+    width: 100%;
 }
 
 header #theme-switch {
     display: none;
+}
+
+header #theme-toggle label img{
+    padding: 0.3rem;
+    backdrop-filter: blur(2px);
+    border-width: 0.1rem;
 }
 
 header #theme-toggle label:hover {
@@ -141,7 +144,6 @@ header #theme-toggle label:hover {
 
 #title-card > img {
     display: none;
-    border-radius: 50%;
     max-width: 400px;
 }
 
@@ -158,7 +160,6 @@ header #theme-toggle label:hover {
 
 #self-descriptor img {
     width: 200px;
-    border-radius: 50%;
     margin: 0 auto;
 }
 
@@ -183,8 +184,8 @@ header #theme-toggle label:hover {
 }
 
 .box-content p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4rem;
+    font-family:monospace;
+    font-size: 1.25rem;
     font-weight: 700;
     width: 100%;
     text-align: left;
@@ -227,7 +228,7 @@ header #theme-toggle label:hover {
 }
 
 .project .project-image, .project .box-content, .used-tools {
-    max-width: 20rem;
+    max-width: 16rem;
     width: 100%;
     border-radius: 20px;
 }
@@ -260,10 +261,23 @@ footer {
 }
 
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 420px) {
 
     main {
         padding: 0 2rem;
+    }
+
+    .svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #title {
+        font-size: 3.5rem;
+    }
+
+    .project .project-image, .project .box-content, .used-tools {
+        max-width: 20rem;
     }
 }
 
@@ -331,14 +345,14 @@ footer {
 
 @media screen and (min-width: 1400px) {
     #tools-and-skills {
-        max-height: 40rem;
+        max-height: 35rem;
     }
 }
 
 
 @media screen and (min-width: 1800px) {
     #tools-and-skills {
-        max-height: 30rem;
+        max-height: 25rem;
     }
 }
 
