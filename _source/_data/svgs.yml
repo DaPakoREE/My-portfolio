@@ -31,11 +31,6 @@ tool_categories:
       license: svg icon from https://www.svgrepo.com/svg/369216/c-sharp. MIT license. https://www.svgrepo.com/page/licensing/#MIT
       key: C#
 
-    - title: C++
-      image_file: cplusplus.svg
-      license: svg icon from https://www.svgrepo.com/svg/333518/c-plus-plus. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
-      key: C++
-
 
   - category: Professional Skills
     tools:
@@ -107,19 +102,6 @@ tool_categories:
       image_file: pygame.svg
       license:
       key: Pygame
-
-
-  - category: Miscellaneous
-    tools:
-    - title: Templating
-      image_file: template_light.svg
-      license: svg icon from https://www.svgrepo.com/svg/360840/template. MIT license. https://www.svgrepo.com/page/licensing/#MIT
-
-    - title: Arduino
-      image_file: arduino.svg
-      license: svg icon from https://www.svgrepo.com/svg/442915/brand-arduino. MIT license. https://www.svgrepo.com/page/licensing/#MIT
-      key: Arduino
-
 
 
 other:

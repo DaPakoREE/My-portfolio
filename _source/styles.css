@@ -81,6 +81,18 @@ h4 {
     margin: 0.5rem 0;
 }
 
+.mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desktop {
+    display: none;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .secondary-border {
     border: 0.2rem solid var(--colorSecondary);
 }
@@ -120,7 +132,7 @@ header #theme-toggle label:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 0 3rem;
+    padding: 0 1rem;
 }
 
 #title-card {
@@ -150,19 +162,23 @@ header #theme-toggle label:hover {
     margin: 0 auto;
 }
 
+#about-me {
+    align-items: center;
+}
+
 #tools-and-skills {
     gap: 1rem;
     padding: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
+    width: fit-content;
 }
 
 #tools-and-skills .box-content {
     display: flex;
     flex-wrap: wrap;
-    max-width: 22rem;
+    max-width: 21rem;
     gap: 0.4em;
 }
 
@@ -189,15 +205,10 @@ header #theme-toggle label:hover {
     align-items: center;
 }
 
-#my-projects .mobile {
+#my-projects .side {
     display: flex;
-    align-items: center;
     flex-direction: column;
-}
-
-#my-projects .desktop {
-    display: none;
-    flex-direction: row;
+    margin: 1rem;
 }
 
 .project {
@@ -249,10 +260,22 @@ footer {
 }
 
 
-@media screen and (min-width: 800px) {
-    
+@media screen and (min-width: 380px) {
+
     main {
-        padding: 0 3rem;
+        padding: 0 2rem;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
     }
 
     #title-card {
@@ -264,10 +287,6 @@ footer {
 
     #about-me, #tools-and-skills, #my-projects, #contact-me {
         text-align: center;
-    }
-
-    #contact-me {
-        width: 60%;
     }
 
     #title-card > img {
@@ -284,20 +303,42 @@ footer {
         display: none;
     }
 
-    #my-projects .mobile {
-        display: none;
+    #tools-and-skills {
+        max-height: 50rem;
     }
 
-    #my-projects .desktop {
-        display: flex;
+    #contact-me {
+        align-items: center;
+    }
+
+    #contact-me div{
+        width: 60%;
     }
 }
 
 
 @media screen and (min-width: 1000px) {
 
+    main {
+        padding: 0 5rem;
+    }
+
     * {
         font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    #tools-and-skills {
+        max-height: 40rem;
+    }
+}
+
+
+@media screen and (min-width: 1800px) {
+    #tools-and-skills {
+        max-height: 30rem;
     }
 }
 
