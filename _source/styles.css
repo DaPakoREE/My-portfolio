@@ -27,6 +27,7 @@ body {
     background-color: var(--colorPrimary);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 main {
@@ -215,6 +216,10 @@ a.item:hover {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+}
+
+.project-category {
+    margin-top: 2rem;
 }
 
 .project {

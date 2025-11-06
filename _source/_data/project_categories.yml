@@ -1,11 +1,14 @@
-Web:
-  Delikat Flora
-  Fjellporten
+- category: Web
+  projects:
+    Delikat Flora
+    Fjellporten
 
 
-Apps:
-  Lunchpad
+- category: Apps
+  projects:
+    Lunchpad
 
 
-Games:
-  Roll a Cube
+- category: Games
+  projects:
+    Roll a Cube
