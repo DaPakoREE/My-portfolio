@@ -280,7 +280,7 @@ a.item:hover {
     display: flex;
     width: fit-content;
     margin: 1rem 0;
-    padding: 0.3rem 0.1rem 0.3rem 0.3rem;
+    padding: 0.3rem 0 0.3rem 0.5rem;
     background-color: var(--colorPrimaryTertiary);
 }
 
@@ -383,14 +383,14 @@ footer {
 
 @media screen and (min-width: 1400px) {
     #tools-and-skills {
-        max-height: 35rem;
+        max-height: 40rem;
     }
 }
 
 
 @media screen and (min-width: 1800px) {
     #tools-and-skills {
-        max-height: 25rem;
+        max-height: 30rem;
     }
 }
 

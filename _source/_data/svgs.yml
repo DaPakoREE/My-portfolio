@@ -69,6 +69,7 @@ tool_categories:
       image_file: google_cloud.svg
       license: svg icon from https://www.svgrepo.com/svg/353805/google-cloud. Logo license. https://www.svgrepo.com/page/licensing/#Logo
       link: https://docs.cloud.google.com/iam/docs/service-account-overview
+      key: SerAcc
 
 
   - category: Databases and Backend
@@ -118,6 +119,20 @@ tool_categories:
       link: https://www.debian.org/
       key: Debian
 
+
+  - category: CAD/3D Modelling
+    tools:
+    - title: AutoCAD
+      image_file: autocad.svg
+      license:
+      link: https://www.autodesk.com/products/autocad/overview
+      key: AutoCAD
+
+    - title: Fusion 360
+      image_file: fusion.svg
+      license:
+      link: https://www.autodesk.com/products/fusion-360/overview
+      key: Fusion
 
   - category: Game Engines
     tools:
