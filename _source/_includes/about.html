@@ -15,12 +15,21 @@
                 These are all the tools I have experience with and skills I have gathered throughout my years of education and work
             </p>
             <div id="tools-and-skills">
-                {% for tool_category in site.data.svgs.tool_categories %}
+                {%- for tool_category in site.data.svgs.tool_categories %}
                 <div class="box-content">
                     <p>
                         {{ tool_category.category }}
                     </p>
-                    {% for tool in tool_category.tools %}
+                    {%- for tool in tool_category.tools %}
+                    {%- if tool.link %}
+                    <a href="{{ tool.link }}" target="_blank" class="item">
+                        <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
+                        {%- if tool.license %}
+                        <!-- {{ tool.license }} -->
+                        {%- endif %}
+                        {{ tool.title }}
+                    </a>
+                    {%- else -%}
                     <div class="item">
                         <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
                         {%- if tool.license %}
@@ -28,8 +37,9 @@
                         {%- endif %}
                         {{ tool.title }}
                     </div>
+                    {%- endif %}
                     {%- endfor %}
                 </div>
-                {% endfor %}
+                {%- endfor %}
             </div>
         </div>

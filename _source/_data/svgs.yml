@@ -4,31 +4,37 @@ tool_categories:
     - title: Python
       image_file: py.svg
       license: svg icon from https://www.svgrepo.com/svg/452091/python. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://www.python.org/
       key: Python
     
     - title: HTML
       image_file: html.svg
       license: svg icon from https://www.svgrepo.com/svg/452228/html-5. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://developer.mozilla.org/en-US/docs/Web/HTML
       key: HTML
 
     - title: CSS
       image_file: css.svg
       license: svg icon from https://www.svgrepo.com/svg/373535/css. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://developer.mozilla.org/en-US/docs/Web/CSS
       key: CSS
     
     - title: JavaScript
       image_file: js.svg
       license: svg icon from https://www.svgrepo.com/svg/349419/javascript. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://developer.mozilla.org/en-US/docs/Web/JavaScript
       key: JS
 
     - title: Java
       image_file: java.svg
       license: svg icon from https://www.svgrepo.com/svg/452234/java. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://www.java.com/en/
       key: Java
 
     - title: C#
       image_file: csharp.svg
       license: svg icon from https://www.svgrepo.com/svg/369216/c-sharp. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://dotnet.microsoft.com/en-us/languages/csharp
       key: C#
 
 
@@ -48,6 +54,7 @@ tool_categories:
     - title: Selenium
       image_file: selenium.svg
       license: svg from https://www.svgrepo.com/svg/354321/selenium. Logo license. https://www.svgrepo.com/page/licensing/#Logo
+      link: https://www.selenium.dev/
       key: Selenium
 
 
@@ -56,10 +63,12 @@ tool_categories:
     - title: Git
       image_file: git.svg
       license: svg icon from https://www.svgrepo.com/svg/452210/git. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://git-scm.com/
 
     - title: Service Accounts
       image_file: google_cloud.svg
       license: svg icon from https://www.svgrepo.com/svg/353805/google-cloud. Logo license. https://www.svgrepo.com/page/licensing/#Logo
+      link: https://docs.cloud.google.com/iam/docs/service-account-overview
 
 
   - category: Databases and Backend
@@ -67,21 +76,25 @@ tool_categories:
     - title: Supabase
       image_file: supabase.svg
       license: 
+      link: https://supabase.com/
       key: Supabase
 
     - title: Jekyll
       image_file: jekyll.svg
       license: svg icon from https://github.com/jekyll/brand/blob/master/jekyll-test-tube.svg-. CC-BY 4.0 license. https://choosealicense.com/licenses/cc-by-4.0/
+      link: https://jekyllrb.com/
       key: Jekyll
 
     - title: Express.js
       image_file: expressjs_light.svg
       license:
+      link: https://expressjs.com/
       key: Express.js
 
     - title: Node.js
       image_file: nodejs.svg
       license: svg icon from https://www.svgrepo.com/svg/452075/node-js. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://nodejs.org/en
       key: Node.js
 
 
@@ -90,16 +103,19 @@ tool_categories:
     - title: Windows
       image_file: windows.svg
       license:
+      link: https://www.microsoft.com/en-us/windows/?r=1
       key: Windows
 
     - title: Raspbian
       image_file: raspbian.svg
       license: svg icon from https://www.svgrepo.com/svg/349487/raspberry-pi. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://www.raspberrypi.com/
       key: Raspbian
 
     - title: Debian
       image_file: debian.svg
       license: svg icon from https://www.debian.org/logos/index.en.html. CC BY-SA 3.0 license. https://creativecommons.org/licenses/by-sa/3.0/deed.en
+      link: https://www.debian.org/
       key: Debian
 
 
@@ -108,16 +124,19 @@ tool_categories:
     - title: Godot Engine
       image_file: godot.svg
       license: svg icon from https://godotengine.org/press/. CC-BY 4.0 license. https://creativecommons.org/licenses/by/4.0/
+      link: https://godotengine.org/
       key: Godot
 
     - title: Unity
       image_file: unity_light.svg
       license: This website is not sponsored by or affiliated with Unity Technologies or its affiliates. Unity Trademark is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere.
+      link: https://unity.com/
       key: Unity
 
     - title: Pygame
       image_file: pygame.svg
       license:
+      link: https://www.pygame.org/news.html
       key: Pygame
 
 
@@ -125,25 +144,25 @@ tool_categories:
 
 other:
   GitHub:
-    image_file: github_light.svg
-    license: svg icon from https://www.svgrepo.com/svg/521688/github. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
+    svg: <?xml version="1.0" encoding="utf-8"?><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" stroke="var(--colorSecondary)" xmlns="http://www.w3.org/2000/svg"><path d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    license: svg icon from https://www.svgrepo.com/svg/508076/github. MIT license. https://www.svgrepo.com/page/licensing/#MIT
 
   OpenLink:
-    image_file: open_link_light.svg
+    svg: <?xml version="1.0" encoding="utf-8"?><svg width="800px" height="800px" viewBox="0 0 24 24" stroke="var(--colorSecondary)" class="stroke" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 9L21 3M21 3H15M21 3L13 11M10 5H7.8C6.11984 5 5.27976 5 4.63803 5.32698C4.07354 5.6146 3.6146 6.07354 3.32698 6.63803C3 7.27976 3 8.11984 3 9.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H14.2C15.8802 21 16.7202 21 17.362 20.673C17.9265 20.3854 18.3854 19.9265 18.673 19.362C19 18.7202 19 17.8802 19 16.2V14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     license: 
 
   Mail:
-    image_file: mail_light.svg
+    svg: <?xml version="1.0" encoding="utf-8"?><svg width="800px" height="800px" viewBox="0 0 24 24" fill="var(--colorSecondary)" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"/></svg>
     license: svg icon from https://www.svgrepo.com/svg/521736/mail. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
 
   Location:
-    image_file: location_light.svg
+    svg: <?xml version="1.0" encoding="utf-8"?><svg fill="var(--colorSecondary)" height="800px" width="800px" version="1.1" id="XMLID_238_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve"><g id="location"><g><path d="M12,24l-0.7-0.6C11,23.1,3,16.5,3,9c0-5,4-9,9-9s9,4,9,9c0,7.5-8,14.1-8.3,14.4L12,24z M12,2C8.1,2,5,5.1,5,9c0,5.4,5.1,10.5,7,12.3c1.9-1.8,7-6.9,7-12.3C19,5.1,15.8,2,12,2z M12,13c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S14.2,13,12,13zM12,7c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S13.1,7,12,7z"/></g></g></svg>
     license: svg icon from https://www.svgrepo.com/svg/449138/location. Apache license. https://www.svgrepo.com/page/licensing/#Apache
 
   Sun:
-    image_file: sun.svg
+    svg: <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="secondary-border" width="800px" height="800px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" cx="32.003" cy="32.005" r="16.001"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M12.001,31.997c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4s1.789,4,4,4h4C10.212,35.997,12.001,34.208,12.001,31.997z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M12.204,46.139l-2.832,2.833c-1.563,1.562-1.563,4.094,0,5.656c1.562,1.562,4.094,1.562,5.657,0l2.833-2.832c1.562-1.562,1.562-4.095,0-5.657C16.298,44.576,13.767,44.576,12.204,46.139z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M32.003,51.999c-2.211,0-4,1.789-4,4V60c0,2.211,1.789,4,4,4s4-1.789,4-4l-0.004-4.001C36.003,53.788,34.21,51.999,32.003,51.999z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M51.798,46.143c-1.559-1.566-4.091-1.566-5.653-0.004s-1.562,4.095,0,5.657l2.829,2.828c1.562,1.57,4.094,1.562,5.656,0s1.566-4.09,0-5.656L51.798,46.143z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M60.006,27.997l-4.009,0.008c-2.203-0.008-3.992,1.781-3.992,3.992c-0.008,2.211,1.789,4,3.992,4h4.001c2.219,0.008,4-1.789,4-4C64.002,29.79,62.217,27.997,60.006,27.997z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M51.798,17.859l2.828-2.829c1.574-1.566,1.562-4.094,0-5.657c-1.559-1.567-4.09-1.567-5.652-0.004l-2.829,2.836c-1.562,1.555-1.562,4.086,0,5.649C47.699,19.426,50.239,19.418,51.798,17.859z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M32.003,11.995c2.207,0.016,4-1.789,4-3.992v-4c0-2.219-1.789-4-4-4c-2.211-0.008-4,1.781-4,3.993l0.008,4.008C28.003,10.206,29.792,11.995,32.003,11.995z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#def1ff" d="M12.212,17.855c1.555,1.562,4.079,1.562,5.646-0.004c1.574-1.551,1.566-4.09,0.008-5.649l-2.829-2.828c-1.57-1.571-4.094-1.559-5.657,0c-1.575,1.559-1.575,4.09-0.012,5.653L12.212,17.855z"/></g></svg>
     license: svg icon from https://www.svgrepo.com/svg/513404/sun. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution
 
   Moon:
-    image_file: moon.svg
+    svg: <?xml version="1.0" encoding="utf-8"?><svg width="800px" height="800px" class="secondary-border" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#0b111a"/></svg>
     license: svg icon from https://www.svgrepo.com/svg/526045/moon. CC-BY license. https://www.svgrepo.com/page/licensing/#CC%20Attribution

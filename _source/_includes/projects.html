@@ -6,7 +6,7 @@
                 These are all the projects I have been a part of and contributed to
             </p>
             <div class="mobile">
-                {% for project in site.data.projects %}
+                {%- for project in site.data.projects %}
                 <div class="project">
                     <div class="box-content">
                         <p>
@@ -31,31 +31,34 @@
                         </div>
                         <div class="links">
                             {%- if project.github_link %}
-                            <a href="{{ project.github_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.GitHub.image_file }}" alt="" class="svg"></a>
+                            <a href="{{ project.github_link }}" target="_blank">
+                                {{ site.data.svgs.other.GitHub.svg }}
+                            </a>
                             <!-- site.data.svgs.other.GitHub.license -->
                             {%- endif %}
                             {%- if project.project_link %}
-                            <a href="{{ project.project_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.OpenLink.image_file }}" alt="" class="svg"></a>
-                            {%- endif -%}
+                            <a href="{{ project.project_link }}" target="_blank">
+                                {{ site.data.svgs.other.OpenLink.svg }}
+                            </a>
+                            {%- endif %}
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                {%- endfor %}
             </div>
             <div class="desktop">
-                {% assign half = site.data.projects.size | divided_by: 2.0 %}
-                {% assign first_half = half | ceil %}
-                {% assign second_half = half | floor %}
-                {% for i in (0..1) %}
-                {% assign offset = i | times: first_half %}
-                {% if i == 0 %}
-                {% assign used_half = first_half %}
-                {% else %}
-                {% assign used_half = second_half %}
-                {% endif %}
-
+                {%- assign half = site.data.projects.size | divided_by: 2.0 -%}
+                {%- assign first_half = half | ceil -%}
+                {%- assign second_half = half | floor -%}
+                {%- for i in (0..1) -%}
+                {%- assign offset = i | times: first_half -%}
+                {%- if i == 0 -%}
+                {%- assign used_half = first_half -%}
+                {%- else -%}
+                {%- assign used_half = second_half -%}
+                {%- endif %}
                 <div class="side">
-                    {% for project in site.data.projects limit:used_half offset:offset %}
+                    {%- for project in site.data.projects limit:used_half offset:offset %}
                     <div class="project">
                         <div class="box-content">
                             <p>
@@ -80,17 +83,21 @@
                             </div>
                             <div class="links">
                                 {%- if project.github_link %}
-                                <a href="{{ project.github_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.GitHub.image_file }}" alt="" class="svg"></a>
+                                <a href="{{ project.github_link }}" target="_blank">
+                                    {{ site.data.svgs.other.GitHub.svg }}
+                                </a>
                                 <!-- site.data.svgs.other.GitHub.license -->
                                 {%- endif %}
                                 {%- if project.project_link %}
-                                <a href="{{ project.project_link }}" target="_blank"><img src="images/svgs/{{ site.data.svgs.other.OpenLink.image_file }}" alt="" class="svg"></a>
-                                {%- endif -%}
+                                <a href="{{ project.project_link }}" target="_blank">
+                                    {{ site.data.svgs.other.OpenLink.svg }}
+                                </a>
+                                {%- endif %}
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+                    {%- endfor %}
                 </div>
-                {% endfor %}
+                {%- endfor %}
             </div>
         </div>

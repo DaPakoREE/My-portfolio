@@ -1,8 +1,11 @@
-const page = document.querySelector("html");
-const themeToggle = document.getElementById("theme-toggle");
-const themeSwitch = themeToggle.querySelector("#theme-switch");
+const page = document.querySelector("html")
+const themeToggle = document.getElementById("theme-toggle")
+const themeSwitch = themeToggle.querySelector("#theme-switch")
 
-let themeSwitchLabelImage = themeToggle.querySelector("label .svg");
+const sun = document.getElementById("sun")
+const moon = document.getElementById("moon")
+
+let themeSwitchLabelImage = themeToggle.querySelector("label .svg")
 let SVGS = []
 let responsiveSVGS = []
 
@@ -18,11 +21,13 @@ function switchTheme() {
     lightMode = !lightMode
     if (lightMode) {
         page.classList.add("light")
-        themeSwitchLabelImage.src = themeSwitchLabelImage.src.replace("sun", "moon")
+        sun.classList.remove("visible")
+        moon.classList.add("visible")
         fileNameAddon = "dark"
     } else {
         page.classList.remove("light")
-        themeSwitchLabelImage.src = themeSwitchLabelImage.src.replace("moon", "sun")
+        moon.classList.remove("visible")
+        sun.classList.add("visible")
         fileNameAddon = "light"
     }
     responsiveSVGS.forEach(svg => {
@@ -32,7 +37,7 @@ function switchTheme() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    SVGS = document.querySelectorAll(".svg");
+    SVGS = document.querySelectorAll(".svg")
     responsiveSVGS = Array.from(SVGS).filter(getResponsiveSVGS);
 });
 
