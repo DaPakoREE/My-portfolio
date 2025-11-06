@@ -206,7 +206,7 @@ header #theme-toggle label:hover {
 
 a.item {
     text-decoration: none;
-    transition: all 0.1s ease;
+    transition: scale 0.1s ease;
 }
 
 a.item:hover {
@@ -241,10 +241,6 @@ a.item:hover {
     gap: 0.2rem;
     width: fit-content;
     height: fit-content;
-    margin-top: 5rem;
-}
-
-.project:first-of-type {
     margin-top: 2rem;
 }
 
@@ -263,8 +259,16 @@ a.item:hover {
     aspect-ratio: 1;
 }
 
-.project a {
-    text-decoration: none;
+.project .box-content div:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.used-tools {
+    display: flex;
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 0.3rem 0 0.3rem 0.5rem;
+    background-color: var(--colorPrimaryTertiary);
 }
 
 .project svg, footer svg {
@@ -276,12 +280,8 @@ a.item:hover {
     stroke: var(--colorRed);
 }
 
-.used-tools {
-    display: flex;
-    width: fit-content;
-    margin: 1rem 0;
-    padding: 0.3rem 0 0.3rem 0.5rem;
-    background-color: var(--colorPrimaryTertiary);
+.project a {
+    text-decoration: none;
 }
 
 #contact-me div {

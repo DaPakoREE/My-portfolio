@@ -16,7 +16,9 @@
                             {{ project.time }}
                         </h4>
                         <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
-                        {{ project.desc }} <br> <br>
+                        <div>
+                            {{ project.desc }} <br> <br>
+                        </div>
                         <div class="used-tools">
                             {%- for tool_category in site.data.svgs.tool_categories -%}
                             {%- for tool in tool_category.tools -%}
@@ -68,7 +70,9 @@
                                 {{ project.time }}
                             </h4>
                             <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
-                            {{ project.desc }} <br> <br>
+                            <div>
+                            {{ project.desc }}
+                            </div>
                             <div class="used-tools">
                                 {%- for tool_category in site.data.svgs.tool_categories -%}
                                 {%- for tool in tool_category.tools -%}
