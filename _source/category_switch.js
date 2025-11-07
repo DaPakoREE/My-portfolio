@@ -6,6 +6,21 @@ let selectedCategory
 let selectedCategoryIndex
 
 
+function switchSelectedCategory(shiftAmount) {
+    let overflow = 0
+    if (selectedCategoryIndex + shiftAmount > projectCategories.length - 1) {
+        overflow = (selectedCategoryIndex + shiftAmount) - projectCategories.length
+        shiftAmount = 0
+        selectedCategoryIndex = 0
+    } else if (selectedCategoryIndex + shiftAmount < 0) {
+        overflow = (selectedCategoryIndex + shiftAmount)
+        shiftAmount = 0
+        selectedCategoryIndex = projectCategories.length
+    }
+    selectedCategoryIndex += (shiftAmount + overflow)
+    updateSelectedCategory()
+}
+
 function updateSelectedCategory() {
     console.log(selectedCategory)
     selectedCategory.classList.remove("active-category")
@@ -22,19 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 nextButton.addEventListener("click", () => {
-    if (selectedCategoryIndex == projectCategories.length - 1) {
-        selectedCategoryIndex = 0
-    } else {
-        selectedCategoryIndex += 1
-    }
-    updateSelectedCategory()
+    switchSelectedCategory(1)
 })
 
 previousButton.addEventListener("click", () => {
-    if (selectedCategoryIndex == 0) {
-        selectedCategoryIndex = projectCategories.length - 1
-    } else {
-        selectedCategoryIndex -= 1
-    }
-    updateSelectedCategory()
+    switchSelectedCategory(-1)
 })
