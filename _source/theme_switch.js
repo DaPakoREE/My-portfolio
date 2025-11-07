@@ -41,7 +41,7 @@ function updateTheme() {
     responsiveSVGS.forEach(svg => {
         svg.src = svg.src.replace(previousFileNameAddon, fileNameAddon)
     });
-    if (timesSwitched == 10) {
+    if ((timesSwitched == 10 || timesSwitched == 11) && !lightMode) {
         selfImages.forEach(selfImage => {
             selfImage.src = selfImage.src.replace("self", "self_dark")
         })
