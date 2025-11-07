@@ -11,6 +11,9 @@ let lightMode = false
 let previousFileNameAddon = "light"
 let fileNameAddon = "dark"
 
+const selfImages = document.querySelectorAll("#title-card img")
+let timesSwitched = 0
+
 function getResponsiveSVGS(svg) {
     return (svg.src.indexOf("light") > -1)
 }
@@ -19,6 +22,8 @@ function switchTheme() {
     lightMode = !lightMode
     updateTheme()
     previousFileNameAddon = fileNameAddon
+    timesSwitched += 1
+
 }
 
 function updateTheme() {
@@ -36,6 +41,11 @@ function updateTheme() {
     responsiveSVGS.forEach(svg => {
         svg.src = svg.src.replace(previousFileNameAddon, fileNameAddon)
     });
+    if (timesSwitched == 10) {
+        selfImages.forEach(selfImage => {
+            selfImage.src = selfImage.src.replace("self", "self_dark")
+        })
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
