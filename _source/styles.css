@@ -354,7 +354,13 @@ button.selected-option, button.selected-option:hover{
 /* -Contact Me- */
 #contact-me div {
     display: flex;
-    align-items: center;
+}
+
+#contact-me > div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 /* -Footer- */
@@ -399,10 +405,6 @@ footer {
         width: 100%;
     }
 
-    #about-me, #tools-and-skills, #my-projects, #contact-me {
-        text-align: center;
-    }
-
     #title-card > img {
         display: block;
         width: 50%;
@@ -419,14 +421,6 @@ footer {
 
     #tools-and-skills {
         max-height: 50rem;
-    }
-
-    #contact-me {
-        align-items: center;
-    }
-
-    #contact-me div{
-        width: 60%;
     }
 }
 
