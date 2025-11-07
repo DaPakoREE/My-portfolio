@@ -4,8 +4,8 @@ const themeSwitch = document.getElementById("theme-switch")
 const sun = document.getElementById("sun")
 const moon = document.getElementById("moon")
 
-let SVGS = []
-let responsiveSVGS = []
+let SVGS;
+let responsiveSVGS;
 
 let lightMode = false
 let previousFileNameAddon = "light"

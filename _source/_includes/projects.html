@@ -5,54 +5,70 @@
             <p>
                 These are all the projects I have been a part of and contributed to
             </p>
-            {%- for project_category in site.data.project_categories -%}
+            {% for project_category in site.data.project_categories %}
+            {%- if project_category == site.data.project_categories[0] -%}
+            <div class="project-category active-category">
+            {%- else %}
             <div class="project-category">
-                <h2>
-                    {{ project_category.category }}
-                </h2>
-                {%- for project in site.data.projects %}
-                {%- if project_category.projects contains project.title -%}
-                <div class="project">
-                    <div class="box-content">
-                        <p>
-                            {{ project.title }}
-                        </p>
-                        <h4>
-                            {{ project.time }}
-                        </h4>
-                        <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
-                        <div>
-                            {{ project.desc }} <br> <br>
-                        </div>
-                        <div class="used-tools">
-                            {%- for tool_category in site.data.svgs.tool_categories -%}
-                            {%- for tool in tool_category.tools -%}
-                            {%- if project.used_tools contains tool.key %}
-                            <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
-                            {%- if tool.license %}
-                            <!-- {{ tool.license }} -->
-                            {%- endif %}
-                            {%- endif %}
-                            {%- endfor -%}
-                            {%- endfor -%}
-                        </div>
-                        <div class="links">
-                            {%- if project.github_link %}
-                            <a href="{{ project.github_link }}" target="_blank">
-                                {{ site.data.svgs.other.GitHub.svg }}
-                            </a>
-                            <!-- site.data.svgs.other.GitHub.license -->
-                            {%- endif %}
-                            {%- if project.project_link %}
-                            <a href="{{ project.project_link }}" target="_blank">
-                                {{ site.data.svgs.other.OpenLink.svg }}
-                            </a>
-                            {%- endif %}
+            {%- endif %}
+                <div id="category-switch">
+                    <label for="arrow-previous">
+                        {{ site.data.svgs.other.ArrowLeft.svg }}
+                    </label>
+                    <input type="button" id="arrow-previous">
+                    <h2>
+                        {{ project_category.category }}
+                    </h2>
+                    <label for="arrow-next">
+                        {{ site.data.svgs.other.ArrowRight.svg }}
+                    </label>
+                    <input type="button" id="arrow-next">
+                </div>
+                <div class="projects-box">
+                    {%- for project in site.data.projects %}
+                    {%- if project_category.projects contains project.title %}
+                    <div class="project">
+                        <div class="box-content">
+                            <p>
+                                {{ project.title }}
+                            </p>
+                            <h4>
+                                {{ project.time }}
+                            </h4>
+                            <img src="images/project_images/{{ project.image_file }}" alt="" class="project-image">
+                            <div>
+                                {{ project.desc }} <br> <br>
+                            </div>
+                            <div class="used-tools">
+                                {%- for tool_category in site.data.svgs.tool_categories -%}
+                                {%- for tool in tool_category.tools -%}
+                                {%- if project.used_tools contains tool.key %}
+                                <img src="images/svgs/{{ tool.image_file }}" alt="" class="svg">
+                                {%- if tool.license %}
+                                <!-- {{ tool.license }} -->
+                                {%- endif %}
+                                {%- endif %}
+                                {%- endfor -%}
+                                {%- endfor -%}
+                            </div>
+                            <div class="links">
+                                {%- if project.github_link %}
+                                <a href="{{ project.github_link }}" target="_blank">
+                                    {{ site.data.svgs.other.GitHub.svg }}
+                                </a>
+                                <!-- site.data.svgs.other.GitHub.license -->
+                                {%- endif %}
+                                {%- if project.project_link %}
+                                <a href="{{ project.project_link }}" target="_blank">
+                                    {{ site.data.svgs.other.OpenLink.svg }}
+                                </a>
+                                {%- endif %}
+                            </div>
                         </div>
                     </div>
+                    {%- endif -%}
+                    {%- endfor %}
                 </div>
-                {%- endif -%}
-                {%- endfor %}
             </div>
             {%- endfor -%}
         </div>

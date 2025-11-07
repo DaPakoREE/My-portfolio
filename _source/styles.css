@@ -47,6 +47,10 @@ a:hover {
     text-decoration: none;
 }
 
+label:hover {
+    cursor: pointer;
+}
+
 svg, .svg {
     width: 1.2em;
     height: 1.2em;
@@ -136,10 +140,6 @@ header #theme-toggle label {
     width: fit-content;
 }
 
-header #theme-toggle label:hover {
-    cursor: pointer;
-}
-
 #title-card, #about-me, #tools-and-skills, #my-projects, #contact-me {
     height: max-content;
     display: flex;
@@ -215,11 +215,48 @@ a.item:hover {
 #my-projects {
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
 }
 
 .project-category {
+    display: none;
     margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-category.active-category {
+    display: flex;
+}
+
+#category-switch {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+#category-switch h2 {
+    margin: 0 1.5rem;
+    padding: 0;
+}
+
+#category-switch input {
+    display: none;
+}
+
+#category-switch label {
+    display: flex;
+}
+
+#category-switch label svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.project-category .projects-box {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .project {
