@@ -13,6 +13,7 @@ let fileNameAddon = "dark"
 
 const selfImages = document.querySelectorAll("#title-card img")
 let timesSwitched = 0
+let easterEggThreshold = 20
 
 function getResponsiveSVGS(svg) {
     return (svg.src.indexOf("light") > -1)
@@ -41,7 +42,7 @@ function updateTheme() {
     responsiveSVGS.forEach(svg => {
         svg.src = svg.src.replace(previousFileNameAddon, fileNameAddon)
     });
-    if ((timesSwitched == 10 || timesSwitched == 11) && !lightMode) {
+    if ((timesSwitched == easterEggThreshold || timesSwitched == easterEggThreshold + 1) && !lightMode) {
         selfImages.forEach(selfImage => {
             selfImage.src = selfImage.src.replace("self", "self_dark")
         })
