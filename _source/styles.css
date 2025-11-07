@@ -57,6 +57,10 @@ label:hover {
     cursor: pointer;
 }
 
+label, button {
+    user-select: none;
+}
+
 /* Svgs */
 svg, .svg {
     width: 1.2em;
