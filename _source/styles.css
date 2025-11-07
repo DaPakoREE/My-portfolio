@@ -1,10 +1,18 @@
-/* variables */
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Colors */
 :root {
     --colorPrimary: #0b111a;
     --colorPrimarySecondary: #0e0729d2;
     --colorPrimaryTertiary: #211f31;
+    --colorPrimaryQuaternary: #2a2d36;
+    --colorPrimaryQuinternary: #434753;
     --colorSecondary: #def1ff;
     --colorBlue: #2559e7b4;
+    --colorBlueSecondary: #346fc7;
     --colorRed: #fd7e7e;
 }
 
@@ -12,33 +20,31 @@
     --colorPrimary: #f0f9ff; 
     --colorPrimarySecondary: #f3f0ffad; 
     --colorPrimaryTertiary: #dbd7ff; 
+    --colorPrimaryQuaternary: #aab9e6;
+    --colorPrimaryQuinternary: #c5d1f7;
     --colorSecondary: #0b111a; 
     --colorBlue: #85a5fdb4; 
+    --colorBlueSecondary: #4088f3;
     --colorRed: #ff5c5c;
 }
 
-* {
-    box-sizing: border-box;
-    font-size: 1rem;
-}
-
+/* -Body- */
 body {
     margin: 0;
     background-color: var(--colorPrimary);
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     height: max-content;
     color: var(--colorSecondary);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* General Clickables */
 a {
     color: var(--colorSecondary);
 }
@@ -51,6 +57,7 @@ label:hover {
     cursor: pointer;
 }
 
+/* Svgs */
 svg, .svg {
     width: 1.2em;
     height: 1.2em;
@@ -58,8 +65,13 @@ svg, .svg {
     box-sizing: content-box;
 }
 
+/* Text Areas */
 p {
     width: 100%;
+}
+
+#title {
+    font-size: 3.0rem;
 }
 
 h1, #title {
@@ -87,6 +99,7 @@ h4 {
     margin: 0.5rem 0;
 }
 
+/* -General Elements- */
 .secondary-border {
     border: 0.2rem solid var(--colorSecondary);
     border-radius: 50%;
@@ -108,10 +121,7 @@ h4 {
     margin: 0 0 0.4em;
 }
 
-#title {
-    font-size: 3.0rem;
-}
-
+/* -Header- */
 header {
     position: fixed;
     margin: 1rem 0 0 2rem;
@@ -140,6 +150,7 @@ header #theme-toggle label {
     width: fit-content;
 }
 
+/* --Main Parts-- */
 #title-card, #about-me, #tools-and-skills, #my-projects, #contact-me {
     height: max-content;
     display: flex;
@@ -148,6 +159,7 @@ header #theme-toggle label {
     padding: 0 1rem;
 }
 
+/* -Title Card- */
 #title-card {
     text-align: center;
 }
@@ -173,10 +185,12 @@ header #theme-toggle label {
     margin: 0 auto;
 }
 
+/* -About Me- */
 #about-me {
     align-items: center;
 }
 
+/* -Tools and Skills- */
 #tools-and-skills {
     gap: 1rem;
     padding: 0;
@@ -212,44 +226,70 @@ a.item:hover {
     align-items: center;
 }
 
+/* -My Projects- */
 #my-projects {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Category Selector */
+#category-selector {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#category-selector {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+#category-selector label {
+    transform: translateY(0.1rem);
+}
+
+#category-selector label:first-of-type {
+    transform: translate(0.6rem, 0.1rem);
+}
+
+#category-selector label button {
+    display: none;
+}
+
+#category-selector label svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+button.selector-option {
+    width: 20px;
+    height: 20px;
+    background-color: var(--colorPrimaryQuaternary);
+    border-radius: 50%;
+    border: none;
+    transition: all 0.1s ease;
+}
+
+button.selector-option:hover {
+    background-color: var(--colorPrimaryQuinternary);
+    cursor: pointer;
+}
+
+button.selected-option, button.selected-option:hover{
+    background-color: var(--colorBlueSecondary);
+    transition: all 0.2s ease;
+}
+
+/* Project Category */
 .project-category {
     display: none;
-    margin-top: 2rem;
     flex-direction: column;
     align-items: center;
 }
 
 .project-category.active-category {
     display: flex;
-}
-
-#category-switch {
-    display: flex;
-    margin-top: 2rem;
-    align-items: center;
-}
-
-#category-switch h2 {
-    margin: 0 1.5rem;
-    padding: 0;
-}
-
-#category-switch input {
-    display: none;
-}
-
-#category-switch label {
-    display: flex;
-}
-
-#category-switch label svg {
-    width: 2rem;
-    height: 2rem;
 }
 
 .project-category .projects-box {
@@ -259,6 +299,7 @@ a.item:hover {
     flex-wrap: wrap;
 }
 
+/* Project */
 .project {
     justify-content: center;
     display: flex;
@@ -310,11 +351,13 @@ a.item:hover {
     text-decoration: none;
 }
 
+/* -Contact Me- */
 #contact-me div {
     display: flex;
     align-items: center;
 }
 
+/* -Footer- */
 footer {
     display: flex;
     flex-direction: column;
@@ -325,6 +368,7 @@ footer {
 }
 
 
+/* -Media Queries- */
 @media screen and (min-width: 420px) {
 
     main {

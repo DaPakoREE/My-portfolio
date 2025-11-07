@@ -5,25 +5,26 @@
             <p>
                 These are all the projects I have been a part of and contributed to
             </p>
+            <div id="category-selector">
+                <label>
+                    {{ site.data.svgs.other.ArrowLeft.svg }}
+                    <button id="arrow-previous"></button>
+                </label>
+                {%- assign i = -1 -%}
+                {%- for project_category in site.data.project_categories %}
+                {%- assign i = i | plus: 1 %}
+                <button value="{{ i }}" class="selector-option {% if i == 0 -%}selected-option{%- endif -%}"></button>
+                {%- endfor %}
+                <label>
+                    {{ site.data.svgs.other.ArrowRight.svg }}
+                    <button id="arrow-next"></button>
+                </label>
+            </div>
             {% for project_category in site.data.project_categories %}
-            {%- if project_category == site.data.project_categories[0] -%}
-            <div class="project-category active-category">
-            {%- else %}
-            <div class="project-category">
-            {%- endif %}
-                <div id="category-switch">
-                    <label for="arrow-previous">
-                        {{ site.data.svgs.other.ArrowLeft.svg }}
-                    </label>
-                    <input type="button" id="arrow-previous">
-                    <h2>
-                        {{ project_category.category }}
-                    </h2>
-                    <label for="arrow-next">
-                        {{ site.data.svgs.other.ArrowRight.svg }}
-                    </label>
-                    <input type="button" id="arrow-next">
-                </div>
+            <div class="project-category {% if project_category == site.data.project_categories[0] -%}active-category{%- endif -%}">
+                <h2>
+                    {{ project_category.category }}
+                </h2>
                 <div class="projects-box">
                     {%- for project in site.data.projects %}
                     {%- if project_category.projects contains project.title %}
@@ -70,5 +71,5 @@
                     {%- endfor %}
                 </div>
             </div>
-            {%- endfor -%}
+            {%- endfor %}
         </div>

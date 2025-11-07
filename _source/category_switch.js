@@ -1,9 +1,14 @@
 const projectCategories = document.querySelectorAll(".project-category")
-const nextButton = document.getElementById("arrow-next")
-const previousButton = document.getElementById("arrow-previous")
+const categorySelector = document.getElementById("category-selector")
 
+const categorySelectors = categorySelector.querySelectorAll("button.selector-option")
+const nextButton = categorySelector.querySelector("#arrow-next")
+const previousButton = categorySelector.querySelector("#arrow-previous")
+
+let selectedCategoryIndex = 0
+
+let selectedSelector
 let selectedCategory
-let selectedCategoryIndex
 
 
 function switchSelectedCategory(shiftAmount) {
@@ -22,19 +27,28 @@ function switchSelectedCategory(shiftAmount) {
 }
 
 function updateSelectedCategory() {
-    console.log(selectedCategory)
+    selectedSelector.classList.remove("selected-option")
     selectedCategory.classList.remove("active-category")
+    selectedSelector = categorySelectors[selectedCategoryIndex]
     selectedCategory = projectCategories[selectedCategoryIndex]
-    console.log(selectedCategory)
+    selectedSelector.classList.add("selected-option")
     selectedCategory.classList.add("active-category")
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    selectedCategoryIndex = 0
+    selectedSelector = categorySelectors[selectedCategoryIndex]
     selectedCategory = projectCategories[selectedCategoryIndex]
-    console.log(selectedCategory)
 });
+
+categorySelectors.forEach(selector => {
+    selector.addEventListener("click", () => {
+        shiftAmount = selector.value - selectedCategoryIndex
+        if (shiftAmount) {
+            switchSelectedCategory(shiftAmount)
+        }
+    })
+})
 
 nextButton.addEventListener("click", () => {
     switchSelectedCategory(1)
