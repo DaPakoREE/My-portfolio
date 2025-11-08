@@ -25,7 +25,7 @@
                 </label>
                 <div id="nav-dropdown-menu" class="box-content backdrop-blur">
                     {%- for part in site.data.major_content_parts %}
-                    <button value="{{ part.id }}">
+                    <button value="{{ part.id }}" class="nav-btn">
                         {{ part.name }}
                     </button>
                     {%- endfor %}
@@ -33,7 +33,7 @@
             </div>
             <div class="box-content desktop backdrop-blur">
                 {%- for part in site.data.major_content_parts %}
-                <button value="part.id">
+                <button value="{{ part.id }}" class="nav-btn">
                     {{ part.name }}
                 </button>
                 {%- endfor %}

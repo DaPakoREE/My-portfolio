@@ -1,4 +1,5 @@
 const navDropdownMenu = document.getElementById("nav-dropdown-menu")
+const scrollButtons = document.querySelectorAll("#navigation div > button")
 
 let showDropdown = false
 
@@ -16,6 +17,10 @@ function showOrHideDropdown() {
     }
 }
 
+function scrollTo(id) {
+    document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+
 
 document.addEventListener("click", (e) => {
     if (e.target.closest("#nav-dropdown-btn")) {
@@ -25,4 +30,10 @@ document.addEventListener("click", (e) => {
             inverseShowValue()
         }
     }
+})
+
+scrollButtons.forEach(scrollButton => {
+    scrollButton.addEventListener("click", () => {
+        scrollTo(scrollButton.value)
+    })
 })
