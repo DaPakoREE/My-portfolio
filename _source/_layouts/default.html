@@ -18,7 +18,26 @@
             <input type="checkbox" id="theme-switch">
         </div>
         <div id="navigation">
-
+            <div class="mobile">
+                <label>
+                    {{ site.data.svgs.other.BurgerMenu.svg }}
+                    <button id="nav-dropdown-btn"></button>
+                </label>
+                <div id="nav-dropdown-menu" class="box-content">
+                    {%- for part in site.data.major_content_parts %}
+                    <button value="{{ part.id }}">
+                        {{ part.name }}
+                    </button>
+                    {%- endfor %}
+                </div>
+            </div>
+            <div class="box-content desktop">
+                {%- for part in site.data.major_content_parts %}
+                <button value="part.id">
+                    {{ part.name }}
+                </button>
+                {%- endfor %}
+            </div>
         </div>
     </header>
     <main>
@@ -26,5 +45,6 @@
     </main>
     <script src="theme_switch.js"></script>
     <script src="category_switch.js"></script>
+    <script src="navigation_bar.js"></script>
 </body>
 </html>

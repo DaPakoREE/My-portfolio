@@ -14,6 +14,7 @@
     --colorBlue: #2559e7b4;
     --colorBlueSecondary: #346fc7;
     --colorRed: #fd7e7e;
+    --colorNone: #ffffff00;
 }
 
 .light {
@@ -125,13 +126,24 @@ h4 {
     margin: 0 0 0.4em;
 }
 
+.mobile {
+    display: flex;
+}
+
+.desktop {
+    display: none;
+}
+
 /* -Header- */
 header {
     position: fixed;
-    margin: 1rem 0 0 2rem;
+    display: flex;
+    align-items: top;
+    margin: 1rem 2rem 0 2rem;
     width: 100%;
 }
 
+/* Theme Toggle */
 header #theme-switch {
     display: none;
 }
@@ -145,13 +157,80 @@ header #theme-toggle label.visible {
 }
 
 header #theme-toggle label svg{
-    padding: 0.3rem;
-    backdrop-filter: blur(2px);
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
     border-width: 0.1rem;
 }
 
 header #theme-toggle label {
     width: fit-content;
+}
+
+/* Navigation Bar */
+header #navigation {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+
+header #navigation .mobile {
+    box-sizing: content-box;
+    flex-direction: column;
+}
+
+header #navigation .mobile label {
+    display: flex;
+    justify-content: right;
+}
+
+header #navigation .mobile label svg {
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 0.1rem solid var(--colorBlue);
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+header #navigation .mobile label > button {
+    display: none;
+}
+
+header #navigation .mobile #nav-dropdown-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--colorNone);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 0.7rem 0;
+    border-width: 0.1rem;
+    margin-top: 0.5rem;
+}
+
+header #navigation .mobile #nav-dropdown-menu.show{
+    display: flex;
+}
+
+header #navigation .mobile #nav-dropdown-menu button{
+    background-color: var(--colorNone);
+    border: none;
+    color: var(--colorSecondary);
+    width: 9rem;
+    height: 1.7rem;
+}
+
+header #navigation .desktop{
+    background-color: var(--colorNone);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 1rem 1rem;
+}
+
+
+header #navigation .desktop button {
+    background-color: var(--colorNone);
+    color: var(--colorSecondary);
+    border: none;
+    padding: 0 1rem;
 }
 
 /* --Main Parts-- */
@@ -401,6 +480,14 @@ footer {
 
 
 @media screen and (min-width: 800px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
 
     #title-card {
         flex-direction: row;
