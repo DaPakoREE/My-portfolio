@@ -14,8 +14,8 @@
     --colorBlue: #2559e7b4;
     --colorBlueSecondary: #346fc7;
     --colorRed: #fd7e7e;
-    --colorNone: #ffffff00;
     --colorTransparent: #ffffff0e;
+    --colorNone: #ffffff00;
 }
 
 .light {
@@ -28,6 +28,7 @@
     --colorBlue: #85a5fdb4; 
     --colorBlueSecondary: #4088f3;
     --colorRed: #ff5c5c;
+    --colorTransparent: #006eff13;
 }
 
 /* -Body- */
