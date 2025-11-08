@@ -1,3 +1,5 @@
+const navDropdownMenu = document.getElementById("nav-dropdown-menu")
+
 let showDropdown = false
 
 
