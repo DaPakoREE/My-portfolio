@@ -179,7 +179,8 @@ header #navigation .mobile {
 
 header #navigation .mobile label {
     display: flex;
-    justify-content: right;
+    width: fit-content;
+    margin-left: auto;
 }
 
 header #navigation .mobile label svg {

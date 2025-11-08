@@ -1,11 +1,12 @@
-const navDropdownBtn = document.getElementById("nav-dropdown-btn")
-const navDropdownMenu = document.getElementById("nav-dropdown-menu")
-
 let showDropdown = false
 
 
-function showOrHideDropdown() {
+function inverseShowValue() {
     showDropdown = !showDropdown
+    showOrHideDropdown()
+}
+
+function showOrHideDropdown() {
     if (showDropdown) {
         navDropdownMenu.classList.add("show")
     } else {
@@ -14,6 +15,12 @@ function showOrHideDropdown() {
 }
 
 
-navDropdownBtn.addEventListener("click", () => {
-    showOrHideDropdown()
-});
+document.addEventListener("click", (e) => {
+    if (e.target.closest("#nav-dropdown-btn")) {
+        inverseShowValue()
+    } else if (!e.target.closest("#nav-dropdown-menu") && !e.target.closest("#navigation .mobile label svg")) {
+        if (showDropdown) {
+            inverseShowValue()
+        }
+    }
+})
