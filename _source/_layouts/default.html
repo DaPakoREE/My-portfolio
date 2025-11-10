@@ -7,42 +7,7 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div id="theme-toggle">
-            <label for="theme-switch" id="sun" class="visible">
-                {{ site.data.svgs.other.Sun.svg }}
-            </label>
-            <label for="theme-switch" id="moon">
-                {{ site.data.svgs.other.Moon.svg }}
-            </label>
-            <input type="checkbox" id="theme-switch">
-        </div>
-        <div id="navigation">
-            <div class="mobile">
-                <label>
-                    {{ site.data.svgs.other.BurgerMenu.svg }}
-                    <button id="nav-dropdown-btn"></button>
-                </label>
-                <div id="nav-dropdown-menu" class="box-content backdrop-blur">
-                    {%- for part in site.data.major_content_parts %}
-                    <button value="{{ part.id }}" class="nav-btn">
-                        {{ part.name }}
-                    </button>
-                    {%- endfor %}
-                </div>
-            </div>
-            <div class="box-content desktop backdrop-blur">
-                {%- for part in site.data.major_content_parts %}
-                <button value="{{ part.id }}" class="nav-btn">
-                    {{ part.name }}
-                </button>
-                {%- endfor %}
-            </div>
-        </div>
-    </header>
-    <main>
-        {{ content }}
-    </main>
+    {{ content }}
     <script src="theme_switch.js"></script>
     <script src="category_switch.js"></script>
     <script src="navigation_bar.js"></script>
