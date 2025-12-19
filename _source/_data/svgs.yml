@@ -59,6 +59,12 @@ tool_categories:
       link: https://www.selenium.dev/
       key: Selenium
 
+    - title: FlaUI
+      image_file: flaui.svg
+      license: png (converted to svg) from https://github.com/FlaUI/FlaUI?tab=readme-ov-file. MIT license. https://github.com/FlaUI/FlaUI?tab=MIT-1-ov-file
+      link: https://github.com/FlaUI/FlaUI
+      key: FlaUI
+
 
   - category: Tools and Technologies
     tools:
@@ -76,6 +82,12 @@ tool_categories:
 
   - category: Databases and Backend
     tools:
+    - title: SQLite
+      image_file: sqlite.svg
+      license: svg icon from https://www.svgrepo.com/svg/374094/sqlite. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://www.sqlite.org/
+      key: SQLite
+
     - title: Supabase
       image_file: supabase.svg
       license: 
