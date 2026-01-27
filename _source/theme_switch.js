@@ -13,41 +13,9 @@ let fileNameAddon = "dark"
 
 const selfImages = document.querySelectorAll("#title-card img")
 let timesSwitched = 0
-let easterEggThreshold = 20
+let easterEggThreshold = Math.floor(Math.random() * 30) + 20
 
-function getResponsiveSVGS(svg) {
-    return (svg.src.indexOf("light") > -1)
-}
-
-function switchTheme() {
-    lightMode = !lightMode
-    updateTheme()
-    previousFileNameAddon = fileNameAddon
-    timesSwitched += 1
-
-}
-
-function updateTheme() {
-    if (lightMode) {
-        page.classList.add("light")
-        sun.classList.remove("visible")
-        moon.classList.add("visible")
-        fileNameAddon = "dark"
-    } else {
-        page.classList.remove("light")
-        moon.classList.remove("visible")
-        sun.classList.add("visible")
-        fileNameAddon = "light"
-    }
-    responsiveSVGS.forEach(svg => {
-        svg.src = svg.src.replace(previousFileNameAddon, fileNameAddon)
-    });
-    if ((timesSwitched == easterEggThreshold || timesSwitched == easterEggThreshold + 1) && !lightMode) {
-        selfImages.forEach(selfImage => {
-            selfImage.src = selfImage.src.replace("self", "self_dark")
-        })
-    }
-}
+console.log(easterEggThreshold)
 
 document.addEventListener("DOMContentLoaded", () => {
     SVGS = document.querySelectorAll(".svg")
@@ -55,5 +23,59 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 themeSwitch.addEventListener("click", () => {
-    switchTheme()
+    switchThemeTrigger()
 });
+
+function enableLightMode() {
+    page.classList.add("light")
+    sun.classList.remove("visible")
+    moon.classList.add("visible")
+    fileNameAddon = "dark"
+}
+
+function disableLightMode() {
+    page.classList.remove("light")
+    moon.classList.remove("visible")
+    sun.classList.add("visible")
+    fileNameAddon = "light"
+}
+
+function updateSvgs() {
+    responsiveSVGS.forEach(svg => {
+        svg.src = svg.src.replace(previousFileNameAddon, fileNameAddon)
+    });
+}
+
+function enableEasterEgg() {
+    selfImages.forEach(selfImage => {
+        selfImage.src = selfImage.src.replace("self", "self_dark")
+    })
+    if (lightMode) {
+        disableLightMode()
+        updateSvgs()
+    }
+}
+
+function getResponsiveSVGS(svg) {
+    return (svg.src.indexOf("light") > -1)
+}
+
+function updateTheme() {
+    if (lightMode) {
+        enableLightMode()
+    } else {
+        disableLightMode()
+    }
+    updateSvgs()
+}
+
+function switchThemeTrigger() {
+    if (timesSwitched < easterEggThreshold) {
+        lightMode = !lightMode
+        updateTheme()
+        previousFileNameAddon = fileNameAddon
+    } else if (timesSwitched == easterEggThreshold) {
+        enableEasterEgg()
+    }
+    timesSwitched += 1
+}
