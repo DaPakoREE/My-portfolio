@@ -15,8 +15,6 @@ const selfImages = document.querySelectorAll("#title-card img")
 let timesSwitched = 0
 let easterEggThreshold = Math.floor(Math.random() * 30) + 20
 
-console.log(easterEggThreshold)
-
 document.addEventListener("DOMContentLoaded", () => {
     SVGS = document.querySelectorAll(".svg")
     responsiveSVGS = Array.from(SVGS).filter(getResponsiveSVGS);
