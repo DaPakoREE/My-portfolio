@@ -53,6 +53,18 @@ tool_categories:
 
   - category: Libraries and Frameworks
     tools:
+    - title: React
+      image_file: react.svg
+      license: svg from https://www.svgrepo.com/svg/452092/react. MIT license. https://www.svgrepo.com/page/licensing/#MIT
+      link: https://react.dev/
+      key: React
+
+    - title: Expo
+      image_file: expo.svg
+      license: svg from https://expo.dev/brand. Logo license. https://expo.dev/brand
+      link: https://expo.dev/home
+      key: Expo
+
     - title: Selenium
       image_file: selenium.svg
       license: svg from https://www.svgrepo.com/svg/354321/selenium. Logo license. https://www.svgrepo.com/page/licensing/#Logo
