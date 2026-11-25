@@ -321,17 +321,13 @@ a.item:hover {
 #category-selector {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
-}
-
-#category-selector {
-    display: flex;
     margin-top: 1rem;
     align-items: center;
 }
 
 #category-selector label {
     transform: translateY(0.1rem);
+    z-index: -1;
 }
 
 #category-selector label:first-of-type {
